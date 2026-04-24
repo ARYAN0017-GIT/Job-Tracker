@@ -1,16 +1,32 @@
-# React + Vite
+JobTracker is a modern, high-performance Single Page Application (SPA) built with React. It is designed to streamline the job application process by providing a clean, responsive dashboard to track companies, roles, and interview statuses.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was built with a heavy focus on performance optimization, scalable state management, and premium UI/UX mechanics.
 
-Currently, two official plugins are available:
+🛠️ Tech Stack & Architecture
+Frontend Framework: React (with Vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Routing: React Router v6 (Client-side routing for lightning-fast page transitions)
 
-## React Compiler
+State Management: React Context API (Global data vault)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Data Persistence: Browser localStorage (Cache management)
 
-## Expanding the ESLint configuration
+Styling: Custom CSS (Material Design 3 principles)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✨ Key Technical Features
+Global Context Architecture: Replaced legacy prop-drilling by engineering a JobProvider Context, cleanly separating data logic from UI components.
+
+Optimized Filtering Math: Utilized React's useMemo hook to chain complex filtering logic (Live Search + Status Chips + A-Z/Date Sorting) without causing unnecessary re-renders.
+
+Smart Elliptical Pagination: Built a custom algorithmic pagination component from scratch that mathematically shifts active pages and ellipses (e.g., 1 ... 4 5 6 ... 10) to handle large datasets efficiently.
+
+Premium UI/UX: Features a custom slide-out side-panel for data entry, an interactive Floating Action Button (FAB) menu, dynamic chip counters that instantly recalculate on search, and a persistent Dark/Light theme toggle.
+
+🗺️ Next Steps (Phase 3 Roadmap)
+This repository represents the completed Frontend architecture. Phase 3 (currently in development) will detach the app from LocalStorage and connect it to a full backend architecture featuring:
+
+Node.js & Express.js REST API
+
+MongoDB Atlas for permanent cloud storage
+
+Automated Gmail API synchronization to automatically detect and log new job applications.
